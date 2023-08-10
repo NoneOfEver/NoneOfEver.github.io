@@ -1,2 +1,0 @@
-# NoneOfEver.github.io
-blog
