@@ -1,0 +1,77 @@
+{
+    "dev": 0,
+    "blog_name": "noe-blog",
+    "blog_name_en": "noe-blog",
+    "blog_author": "noe",
+    "blog_description_en": "智能制造工程BD在读",
+    "blog_typed": [
+        "Life is short, you need Python",
+        "人生苦短，我用Python.",
+        "Beautiful is better than ugly.",
+        "美丽优于丑陋.",
+        "Explicit is better than implicit.",
+        "直白优于含蓄.",
+        "Simple is better than complex.",
+        "简单优于复杂.",
+        "Complex is better than complicated.",
+        "复杂优于繁琐.",
+        "Readability counts.",
+        "可读性很重要."
+    ],
+    "meta_description": "Python Django JavaScript 学习讨论,我们是一群热爱Python的程序员，人生苦短，我用JavaScript！",
+    "meta_keywords":"Python,Django,JavaScript,程序员,人生苦短,我用Python",
+    "profile_image":"assets/images/profile_img.jpg",
+    "blog_bg": "assets/images/bg.jpg",
+    "theme": "default_theme",
+    "build": "blog",
+    "md_dir": "articles",
+    "blog_page_num":8,
+    "blog_test_url":"http://127.0.0.1:5500/",
+    "blog_url":"https://suiyan.cc/",
+    "github":"https://github.com/Jsky2020/suiyan/blob/suiyan/articles/",
+    "blog_sns": [
+        {
+            "ico": "github",
+            "url": "https://github.com/bosichong/suiyan"
+        },
+        {
+            "ico": "git",
+            "url": "https://gitee.com/J_Sky/suiyan"
+        },
+        {
+            "ico": "qq",
+            "url": "https://user.qzone.qq.com/285911/"
+        },
+        {
+            "ico": "book",
+            "url": "https://www.zhihu.com/people/J_sky/activities"
+        },
+        {
+            "ico": "rss",
+            "url": "https://suiyan.cc/rss.xml"
+        }
+    ],
+    "nav": [
+        {
+            "ico": "home",
+            "text": "Home",
+            "url": "index.html"
+        },
+        {
+            "ico": "archive",
+            "text": "Archive",
+            "url": "archives.html"
+        },
+        {
+            "ico": "tags",
+            "text": "Tags",
+            "url": "tags.html"
+        },
+        {
+            "ico": "user",
+            "text": "About Me",
+            "url": "aboutme.html"
+        }
+    ]
+
+}
