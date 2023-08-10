@@ -16,12 +16,12 @@
     "md_dir": "articles",
     "blog_page_num":8,
     "blog_test_url":"http://127.0.0.1:5500/",
-    "blog_url":"https://noneofever.github.io/",
-    "github":"https://github.com/Jsky2020/suiyan/blob/suiyan/articles/",
+    "blog_url":"https://noneofever.github.io/blog_file/blog/",
+    "github":"https://noneofever.github.io/blog_file/articles/",
     "blog_sns": [
         {
             "ico": "github",
-            "url": "https://github.com/bosichong/suiyan"
+            "url": "https://github.com/NoneOfEver"
         },
         {
             "ico": "git",
@@ -29,15 +29,15 @@
         },
         {
             "ico": "qq",
-            "url": "https://user.qzone.qq.com/285911/"
+            "url": "https://user.qzone.qq.com/2651984573/"
         },
         {
             "ico": "book",
-            "url": "https://www.zhihu.com/people/J_sky/activities"
+            "url": "https://www.zhihu.com/people/noneofever"
         },
         {
             "ico": "rss",
-            "url": "https://suiyan.cc/rss.xml"
+            "url": "https://noneofever.github.io/blog_file/blog/rss.xml"
         }
     ],
     "nav": [
