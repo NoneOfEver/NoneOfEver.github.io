@@ -131,3 +131,13 @@
 2023-08-10 22:27:20.947 | INFO     | __main__:create_sitemap:79 - sitemap.xml、sitemap.txt更新完毕！
 2023-08-10 22:27:20.954 | INFO     | __main__:create_rss:104 - 生成rss.xml成功！
 2023-08-10 22:27:20.954 | INFO     | __main__:create_all:336 - 所有静态资源创建更新完毕！
+2023-08-11 10:16:31.757 | INFO     | utils:clear_build:148 - 清理所有静态html成功！
+2023-08-11 10:16:31.757 | INFO     | utils:copy_file:230 - 文件E:\NoneOfEver.github.io\blog_file\config.json已复制到E:\NoneOfEver.github.io\blog_file\blog\config.json
+2023-08-11 10:16:32.035 | INFO     | utils:create_data_json:93 - blog数据索引更新完毕！
+2023-08-11 10:16:32.141 | INFO     | __main__:create_index_html:124 - 生成首页、列表页成功！
+2023-08-11 10:16:32.173 | INFO     | __main__:create_archives_html:192 - 生成archives.html成功！
+2023-08-11 10:16:32.213 | INFO     | __main__:create_tags_html:215 - 生成tags.html成功！
+2023-08-11 10:16:32.259 | INFO     | __main__:create_allblog:242 - 生成所有文章页成功！
+2023-08-11 10:16:32.269 | INFO     | __main__:create_sitemap:79 - sitemap.xml、sitemap.txt更新完毕！
+2023-08-11 10:16:32.290 | INFO     | __main__:create_rss:104 - 生成rss.xml成功！
+2023-08-11 10:16:32.290 | INFO     | __main__:create_all:336 - 所有静态资源创建更新完毕！
