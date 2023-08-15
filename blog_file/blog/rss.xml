@@ -4,7 +4,14 @@
         <title>noe-blog noe-blog</title>
         <link>https://noneofever.github.io/blog_file/blog/</link>
         <description>noe-blog noe-blog 最近更新的10篇博文。</description>
-        <pubDate>2023-08-10 17:59:09</pubDate>
+        <pubDate>2023-08-16 00:23:53</pubDate>
+        
+        <item>
+            <title>English reading</title>
+            <link>https://noneofever.github.io/blog_file/blog/2023/20230816002353.html</link>
+            <author>noe</author>
+            <pubDate>2023-08-16 00:23:53</pubDate>
+        </item>
         
         <item>
             <title>MIT—线性代数笔记01</title>

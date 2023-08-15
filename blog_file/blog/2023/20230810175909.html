@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="Linear Algebra" name="keywords">
+    <meta content="" name="description">
+    <meta content="noe" name="author">
+    <link rel="icon" type="image/png" href="https://noneofever.github.io/blog_file/blog/assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://noneofever.github.io/blog_file/blog/assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+    <title>noe-blog-noe-blogMIT—线性代数笔记01</title>
+    <!-- 引入 pico.css -->
+    <link rel="stylesheet" href="https://noneofever.github.io/blog_file/blog/assets/css/pico.min.css">
+    <!-- 引入 图标CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 引入 站点样式 -->
+    <link rel="stylesheet" href="https://noneofever.github.io/blog_file/blog/assets/css/custom.css">
+    <script src="https://noneofever.github.io/blog_file/blog/assets/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="hero" data-theme="dark" style="background-image: url('https://noneofever.github.io/blog_file/blog/assets/images/bg_new2.jpg');">
+    <nav class="container-fluid"><ul>
+    <li><a href="https://noneofever.github.io/blog_file/blog/" class="contrast">noe-blog</a></li>
+</ul>
+<ul>
+    <li>
+        <details role="list" dir="rtl">
+            <summary aria-haspopup="listbox" role="link" class="contrast">Theme</summary>
+            <ul role="listbox">
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+            </ul>
+        </details>
+    </li>
+</ul></nav>
+    <head><header class="container">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <div class="hd"><span id="typed"></span></div>
+    <script>
+        const typed = new Typed('#typed', {
+          strings: [
+          
+          'Stay hungry,Stay foolish.',
+          
+          ],
+          typeSpeed: 100,
+          backSpeed: 10,
+          backDelay: 100,
+          startDelay: 1000,
+          loop:true
+    });
+
+    </script>
+</header></head>
+</div>
+<main class="container">
+    <div class="grid">
+        <section>
+
+
+
+<hgroup>
+    <h1>MIT—线性代数笔记01</h1>
+    <h3> 作者:<a href="#">noe</a> | <small>发表于:2023-08-10 17:59:09</small> | <small>更新于:2023-08-10 22:26:16</small> | Tag:
+        
+        
+        <small>Linear Algebra</small>
+        
+    </h3>
+</hgroup>
+<p><h2>MIT—线性代数笔记01 行图像和列图像</h2>
+<p><em>declaration：本文非原著，仅供博客测试使用，阅读原作请导向致此</em><a href="https://zhuanlan.zhihu.com/p/45708880">URL</a></p>
+<p>第01讲 行图像和列图像 Row picture &amp; Column picture
+* 线性方程的几何图像 The geometry of linear equations
+线性代数的基本问题就是解n元一次方程组。例如：二元一次方程组
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/1.png" />
+写成矩阵形式就是
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/2.png" /></p>
+<p>其中A= <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/3.png" />
+被称为系数矩阵（coefficient matrix）。</p>
+<p>未知数向量通常记为x= <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/4.png" /></p>
+<p>而等号右侧的向量记为b。线性方程组简记为Ax=b。</p>
+<ul>
+<li>行图像 Row Picture
+  <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/5.png" /></li>
+</ul>
+<p>行图像遵从解析几何的描述，每个方程在平面上的图像为一条直线。找到符合方程的两个数组，就可以确定出x-y平面上的两个点，连接两点可以画出该方程所代表的直线。两直线交点即为方程组的解x=1,y=2。</p>
+<ul>
+<li>列图像Column Picture
+在列图像中，我们将系数矩阵写成列向量的形式，则求解原方程变为寻找列向量的线性组合（linear combination）来构成向量b。
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/6.png" /></li>
+</ul>
+<p>向量线性组合是贯穿本课程的重要概念。对于给定的向量c和d以及标量x和y，我们将xc+yd称之为c和d的一个线性组合。</p>
+<p>从几何上讲，我们是寻找满足如下要求的x和y，使得两者分别数乘对应的列向量之后相加得到向量 
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/7.png" />。其几何图像如下图。</p>
+<p><img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/8.png" />
+蓝色为向量 
+ <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/9.png" />；</p>
+<p>红色为向量 
+ <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/10.png" />；</p>
+<p>可以看到当蓝色的向量乘以1与红色的向量乘以2后做加法（首尾相接）就可以得到绿色的向量b=
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/11.png" />，由此可得到方程的解x=1,y=2。</p>
+<p>想象一下如果任意取x,y，则得到的线性组合又是什么？其结果就是以上两个列向量的所有线性组合将会布满整个坐标平面。</p>
+<p><img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/12.png" />
+D.C.Lay 的《线性代数及其应用》中，绘制向量<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/13.png" />和<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/14.png" />
+的线性组合充满整个平面的图像，节点处为向量的整数倍线性组合。（老规矩，斜体部分是我自己乱喷的）</p>
+<p>这本书也是难得的好书，作者喜欢利用几何图像来帮助读者理解线性代数中的概念，英文版出到第5版了，华章出过中译本。（是不是觉得上面那个图片有点斜，是斜线造成的错觉呦！）</p>
+<p>将以上讨论扩展到三元。图不好弄，所以用了G. Strang课本里的另一个方程，没有用视频中的那个！！！这样方程和配图是吻合的。 
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/15.png" />
+画图真不是G.Strang的长项，在视频里画的就比较shi，他自己也承认了。在课本里他用两个面相交于一条直线画了一个图，然后让这条直线和第三个平面相交画了第二个图。同样的事，D.C.Lay一张图分分钟搞定。</p>
+<p><img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/16.png" /></p>
+<p>如果改变等号右侧的b的数值，那么对于行图像而言三个平面都改变了，而对于列图像而言，三个向量并没有发生变化，只是需要寻找一个新的组合。</p>
+<p>那么问题来了，是否对于所有的b，方程Ax=b都有解？</p>
+<p>从列图像上看，问题转化为“列向量的线性组合是否覆盖整个三维空间？”</p>
+<p>反例：若三个向量在同一平面内——比如“列3”恰好等于“列1”加“列2”，而若b不在该平面内，则三个列向量无论怎么组合也得不到平面外的向量b。此时矩阵A为奇异阵或称不可逆矩阵。在矩阵A不可逆条件下，不是所有的b都能令方程Ax=b有解。</p>
+<p>对n维情形则是，n个列向量如果相互独立——“线性无关”，则方程组有解。否则这n个列向量起不到n个的作用，其线性组合无法充满n维空间，方程组未必有解。</p>
+<p>从行图像的角度来看，三元方程组是否有解意味着什么？当方程所代表的三个平面相交于一点时方程有唯一解；三个平面中至少两个平行则方程无解；平面的两两交线互相平行方程也无解；三个平面交于一条直线则方程有无穷多解。</p>
+<p>都是示意图，来看看GS和Lay的作图差异有多大吧……
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/17.png" />
+* 矩阵与向量的乘法
+列图像：Ax是矩阵A列向量的线性组合 ：<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/18.png" /> </p>
+<p>也可以通过将矩阵A的行向量和x向量进行点积来计算：
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/19.png" /></p></p>
+
+
+</section>
+        <aside><section>
+    <hgroup class="hd">
+        <img class="avatar" src="https://noneofever.github.io/blog_file/blog/assets/images/profile_img.jpg"/>
+        <h3>noe</h3>
+        <div><small>智能制造工程BD在读</small></div>
+        <div class="blog-state">
+            <div class="state-item">
+                <small>2</small>
+                <small>日志</small>
+            </div>
+            <div class="state-item">
+                <small>2</small>
+                <small>标签</small>
+            </div>
+        </div>
+        <ul class="sns-ul">
+            
+            <li class="sns-li">
+                <a href="https://github.com/NoneOfEver" target="_blank">
+                    <i class="fa fa-github "></i>
+                </a>
+            </li>
+            
+            <li class="sns-li">
+                <a href="https://space.bilibili.com/277787218?spm_id_from=333.1007.0.0" target="_blank">
+                    <i class="fa fa-television "></i>
+                </a>
+            </li>
+            
+            <li class="sns-li">
+                <a href="https://user.qzone.qq.com/2651984573/" target="_blank">
+                    <i class="fa fa-qq "></i>
+                </a>
+            </li>
+            
+            <li class="sns-li">
+                <a href="https://www.zhihu.com/people/noneofever" target="_blank">
+                    <i class="fa fa-book "></i>
+                </a>
+            </li>
+            
+            <li class="sns-li">
+                <a href="https://noneofever.github.io/blog_file/blog/rss.xml" target="_blank">
+                    <i class="fa fa-rss "></i>
+                </a>
+            </li>
+            
+        </ul>
+    </hgroup>
+
+    <!-- Search -->
+    <div id="blog-search">
+        <input type="text" id="search-input" name="search" placeholder="JavaScript">
+        <button id="search-btn" class="contrast"
+                data-target="modal-example"
+                onClick="toggleModal(event)">Search
+        </button>
+
+    </div>
+
+
+    <!-- Modal -->
+    <dialog id="modal-example">
+        <article>
+            <a href="#close"
+               aria-label="Close"
+               class="close"
+               data-target="modal-example"
+               onClick="toggleModal(event)">
+            </a>
+            <h3>搜索结果</h3>
+            <div id="modal" style="display: none;">
+                <ul id="result-list"></ul>
+            </div>
+        </article>
+    </dialog>
+    <script src="https://noneofever.github.io/blog_file/blog/assets/js/url.js"></script>
+    <script src="https://noneofever.github.io/blog_file/blog/assets/js/main.js"></script>
+    <script src="https://noneofever.github.io/blog_file/blog/assets/js/modal.js"></script>
+
+</section>
+
+
+<nav>
+    <ul id="blog-nav">
+        
+        <li>
+            <a href="https://noneofever.github.io/blog_file/blog/index.html">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://noneofever.github.io/blog_file/blog/archives.html">
+                <i class="fa fa-archive"></i>
+                Archive
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://noneofever.github.io/blog_file/blog/tags.html">
+                <i class="fa fa-tags"></i>
+                Tags
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://noneofever.github.io/blog_file/blog/aboutme.html">
+                <i class="fa fa-user"></i>
+                About Me
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+</aside>
+    </div>
+
+</main>
+<footer><div class="container">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+    <div><small>
+        Powered by
+    </small>
+        <a href="https://noneofever.github.io/" target="_blank">
+            .noe
+        </a>
+       <small> | </small>
+        <small>
+            Copyright
+            <i aria-hidden="true" class="fa fa-copyright">
+            </i>
+            2017-2023
+        </small>
+    </div>
+</div></footer>
+<!-- Minimal theme switcher -->
+<script src="https://noneofever.github.io/blog_file/blog/assets/js/minimal-theme-switcher.js"></script>
+<!-- Scroll to Top button selector -->
+<a class="to-top"><i class="fa fa-chevron-up fa-3" aria-hidden="true"></i></a>
+<script src="https://noneofever.github.io/blog_file/blog/assets/js/jquery.toTop.min.js"></script>
+<script>
+        jQuery(function($){
+            // Plugin activation (basic - with all default values)
+            // $('.to-top').toTop();
+
+            // Plugin activation with options
+            $('.to-top').toTop({
+                //options with default values
+                autohide: true,  //boolean 'true' or 'false'
+                offset: 420,     //numeric value (as pixels) for scrolling length from top to hide automatically
+                speed: 500,      //numeric value (as mili-seconds) for duration
+                position:true,   //boolean 'true' or 'false'. Set this 'false' if you want to add custom position with your own css
+                right: 15,       //numeric value (as pixels) for position from right. It will work only if the 'position' is set 'true'
+                bottom: 30       //numeric value (as pixels) for position from bottom. It will work only if the 'position' is set 'true'
+            });
+        });
+
+</script>
+</body>
+</html>
