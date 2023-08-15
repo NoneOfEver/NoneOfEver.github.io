@@ -183,6 +183,26 @@ def create_archives_html():
     logger.info('生成archives.html成功！')
 
 
+def create_aboutme_html():
+    """生成aboutme.html"""
+    blog_data = load_blogdata_json(BLOGDATAJSON)
+    config = load_configjson(CONFIGJSON)
+    # 设置jinja模板
+    env = Environment(loader=FileSystemLoader(os.path.join(THEME, config["theme"])))
+    context = create_context()
+    tmp = env.get_template("aboutme.html")  # 模板
+    aboutme_html_path = os.path.join(BLOGPAGES, 'aboutme.html')  # 首页HTML
+    # 组装aboutme页面的上下文数据。
+    data = formatdata(blog_data)
+    context["pages_num"] = len(blog_data)
+    context["update"] = blog_data[0]["time"]
+    context["aboutme"] = data
+    context["title"] = "aboutme"
+    with open(aboutme_html_path, mode='w', encoding='utf-8') as f:
+        f.write(tmp.render(**context))
+    logger.info('生成aboutme.html成功！')
+
+
 def create_tags_html():
     """生成archives.html"""
     blog_data = load_blogdata_json(BLOGDATAJSON)
@@ -333,6 +353,7 @@ def created():
     """
     create_index_html()
     create_archives_html()
+    create_aboutme_html()
     create_tags_html()
     create_allblog()
     create_sitemap()

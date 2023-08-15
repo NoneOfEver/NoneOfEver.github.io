@@ -1,20 +1,8 @@
 {% extends "layout.html" %}
-{% block title %}{{ blog.title }}{% endblock %}
-{% block keywords %}{% set tags = blog.tag.split(",") %}{% for tag in tags %}{{ tag }}{% endfor %}{% endblock %}
-{% block description %}{{ blog.description }}{% endblock %}
+
 {% block article %}
 
 
-
-<hgroup>
-    <h1>{{ blog.title }}</h1>
-    <h3> 作者:<a href="#">{{ blog.author }}</a> | <small>发表于:{{ blog.time }}</small> | <small>更新于:{{ blog.uptime }}</small> | Tag:
-        {% set tags = blog.tag.split(",") %}
-        {% for tag in tags %}
-        <small>{{ tag }}</small>
-        {% endfor %}
-    </h3>
-</hgroup>
 <p>你好，来自轻度折腾患者自己编写的静态博客，主题借鉴自GitHub社区。欢迎有相同爱好的朋友互相交流。</p>
 <h2>为什么要做这个blog？</h2>
 <p>其实有很多想法，简单说想把学到的东西实践一下，也算是对<code>Python JavaScript</code>学习的一个总结。希望记录自己的学习笔记以及一些心得经验，算是帮助自己；如果，我是说如果这些记录可能帮到你了，那么这篇blog和这个博客就有了新的意义。本人也只是菜鸟一只，希望大家互相学习，一起实践<code>python JavaScript</code>。</p>
