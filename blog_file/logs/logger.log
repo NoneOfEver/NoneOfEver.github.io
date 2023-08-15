@@ -244,3 +244,7 @@
 2023-08-15 22:14:55.361 | INFO     | __main__:create_sitemap:70 - sitemap.xml、sitemap.txt更新完毕！
 2023-08-15 22:14:55.374 | INFO     | __main__:create_rss:95 - 生成rss.xml成功！
 2023-08-15 22:14:55.378 | INFO     | __main__:create_all:347 - 所有静态资源创建更新完毕！
+2023-08-16 00:23:53.388 | INFO     | s:create_blog:303 - blog文章.md创建成功！
+2023-08-16 00:25:20.189 | INFO     | utils:clear_build:143 - 清理所有静态html成功！
+2023-08-16 00:25:20.197 | INFO     | utils:copy_file:225 - 文件E:\NoneOfEver.github.io\blog_file\config.json已复制到E:\NoneOfEver.github.io\blog_file\blog\config.json
+2023-08-16 00:25:20.291 | ERROR    | utils:extract_md_header:108 - 错误：[''] 无法分割成键值对
