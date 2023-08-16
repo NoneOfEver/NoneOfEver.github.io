@@ -62,7 +62,7 @@
 
 <hgroup>
     <h1>MarkdownTrouble</h1>
-    <h3> 作者:<a href="#">noe</a> | <small>发表于:2023-08-16 17:29:54</small> | <small>更新于:2023-08-16 18:21:50</small> | Tag:
+    <h3> 作者:<a href="#">noe</a> | <small>发表于:2023-08-16 17:29:54</small> | <small>更新于:2023-08-16 18:25:17</small> | Tag:
         
         
         <small>blogTech</small>
@@ -83,17 +83,17 @@
 <p>use_align_attribute: Set to True to use align instead of an appropriate style attribute</p>
 <p>Default: 'False'</p>
 <p>A trivial example:</p>
-<p><code>{
-  markdown.markdown(some_text, extensions=['tables'])
-}</code>
+<p>```</p>
+<p>markdown.markdown(some_text, extensions=['tables'])</p>
+<p>```
 Examples
 For an example, let us suppose that alignment should be controlled by the legacy align attribute.</p>
-<p><code>{
-from markdown.extensions.tables import TableExtension
+<p>```</p>
+<p>from markdown.extensions.tables import TableExtension
 html = markdown.markdown(text,
 ...                 extensions=[TableExtension(use_align_attribute=True)]
-... )
-}</code></p>
+... )</p>
+<p>```</p>
 </blockquote>
 <p>最终将s.py中代码改为：</p>
 <p><code>{
