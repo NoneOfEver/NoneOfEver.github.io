@@ -133,7 +133,7 @@ async def create_list_html(config, blog_data, tmp, i, ps):
         for p in range(cs * i, maxp):
             article = blog_data[p]
             article["blog"] = markdown(read_file_without_header(os.path.join(ARTICLES_DIR,
-                                                                             blog_data[p]["url"] + '.md')))
+                                                                             blog_data[p]["url"] + '.md')),extensions=['tables','codehilite'])
             articles.append(article)
             context["articles"] = articles  # 把当前页的blog数据加入上下文
 
@@ -264,7 +264,7 @@ async def create_blog_html(blogdata, tagsdata, tmp, blog):
     context["pn"] = get_prev_next(blog["title"], blogdata)  # 前后页面
     context["related"] = get_related(blog["tag"], tagsdata, blog)  # 相关页面
     context["blog"] = blog
-    context["data"] = markdown(read_file_without_header(os.path.join(ARTICLES_DIR, blog["url"] + ".md")))
+    context["data"] = markdown(read_file_without_header(os.path.join(ARTICLES_DIR, blog["url"] + ".md")),extensions=['tables','codehilite'])
     async with aiofiles.open(blog_path, mode='w', encoding='utf-8') as f:
         await f.write(tmp.render(**context))
         logger.debug('生成' + blog["title"] + '博文成功！')
