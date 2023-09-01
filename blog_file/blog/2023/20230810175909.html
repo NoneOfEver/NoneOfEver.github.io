@@ -62,7 +62,7 @@
 
 <hgroup>
     <h1>MIT—线性代数笔记01</h1>
-    <h3> 作者:<a href="#">noe</a> | <small>发表于:2023-08-10 17:59:09</small> | <small>更新于:2023-08-10 22:26:16</small> | Tag:
+    <h3> 作者:<a href="#">noe</a> | <small>发表于:2023-08-10 17:59:09</small> | <small>更新于:2023-09-01 17:28:41</small> | Tag:
         
         
         <small>Linear Algebra</small>
@@ -71,12 +71,14 @@
 </hgroup>
 <p><h2>MIT—线性代数笔记01 行图像和列图像</h2>
 <p><em>declaration：本文非原著，仅供博客测试使用，阅读原作请导向致此</em><a href="https://zhuanlan.zhihu.com/p/45708880">URL</a></p>
-<p>第01讲 行图像和列图像 Row picture &amp; Column picture
-* 线性方程的几何图像 The geometry of linear equations
+<p>第01讲 行图像和列图像 Row picture &amp; Column picture</p>
+<ul>
+<li>线性方程的几何图像 The geometry of linear equations
 线性代数的基本问题就是解n元一次方程组。例如：二元一次方程组
 <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/1.png" />
 写成矩阵形式就是
-<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/2.png" /></p>
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/2.png" /></li>
+</ul>
 <p>其中A= <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/3.png" />
 被称为系数矩阵（coefficient matrix）。</p>
 <p>未知数向量通常记为x= <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/4.png" /></p>
@@ -92,12 +94,12 @@
 <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/6.png" /></li>
 </ul>
 <p>向量线性组合是贯穿本课程的重要概念。对于给定的向量c和d以及标量x和y，我们将xc+yd称之为c和d的一个线性组合。</p>
-<p>从几何上讲，我们是寻找满足如下要求的x和y，使得两者分别数乘对应的列向量之后相加得到向量 
+<p>从几何上讲，我们是寻找满足如下要求的x和y，使得两者分别数乘对应的列向量之后相加得到向量
 <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/7.png" />。其几何图像如下图。</p>
 <p><img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/8.png" />
-蓝色为向量 
+蓝色为向量
  <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/9.png" />；</p>
-<p>红色为向量 
+<p>红色为向量
  <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/10.png" />；</p>
 <p>可以看到当蓝色的向量乘以1与红色的向量乘以2后做加法（首尾相接）就可以得到绿色的向量b=
 <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/11.png" />，由此可得到方程的解x=1,y=2。</p>
@@ -106,7 +108,7 @@
 D.C.Lay 的《线性代数及其应用》中，绘制向量<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/13.png" />和<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/14.png" />
 的线性组合充满整个平面的图像，节点处为向量的整数倍线性组合。（老规矩，斜体部分是我自己乱喷的）</p>
 <p>这本书也是难得的好书，作者喜欢利用几何图像来帮助读者理解线性代数中的概念，英文版出到第5版了，华章出过中译本。（是不是觉得上面那个图片有点斜，是斜线造成的错觉呦！）</p>
-<p>将以上讨论扩展到三元。图不好弄，所以用了G. Strang课本里的另一个方程，没有用视频中的那个！！！这样方程和配图是吻合的。 
+<p>将以上讨论扩展到三元。图不好弄，所以用了G. Strang课本里的另一个方程，没有用视频中的那个！！！这样方程和配图是吻合的。
 <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/15.png" />
 画图真不是G.Strang的长项，在视频里画的就比较shi，他自己也承认了。在课本里他用两个面相交于一条直线画了一个图，然后让这条直线和第三个平面相交画了第二个图。同样的事，D.C.Lay一张图分分钟搞定。</p>
 <p><img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/16.png" /></p>
@@ -117,9 +119,11 @@ D.C.Lay 的《线性代数及其应用》中，绘制向量<img alt="" src="http
 <p>对n维情形则是，n个列向量如果相互独立——“线性无关”，则方程组有解。否则这n个列向量起不到n个的作用，其线性组合无法充满n维空间，方程组未必有解。</p>
 <p>从行图像的角度来看，三元方程组是否有解意味着什么？当方程所代表的三个平面相交于一点时方程有唯一解；三个平面中至少两个平行则方程无解；平面的两两交线互相平行方程也无解；三个平面交于一条直线则方程有无穷多解。</p>
 <p>都是示意图，来看看GS和Lay的作图差异有多大吧……
-<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/17.png" />
-* 矩阵与向量的乘法
-列图像：Ax是矩阵A列向量的线性组合 ：<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/18.png" /> </p>
+<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/17.png" /></p>
+<ul>
+<li>矩阵与向量的乘法
+列图像：Ax是矩阵A列向量的线性组合 ：<img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/18.png" /></li>
+</ul>
 <p>也可以通过将矩阵A的行向量和x向量进行点积来计算：
 <img alt="" src="https://noneofever.github.io/blog_file/blog/assets/images/19.png" /></p></p>
 
@@ -132,11 +136,11 @@ D.C.Lay 的《线性代数及其应用》中，绘制向量<img alt="" src="http
         <div><small>智能制造工程BD在读</small></div>
         <div class="blog-state">
             <div class="state-item">
-                <small>4</small>
+                <small>5</small>
                 <small>日志</small>
             </div>
             <div class="state-item">
-                <small>4</small>
+                <small>5</small>
                 <small>标签</small>
             </div>
         </div>
