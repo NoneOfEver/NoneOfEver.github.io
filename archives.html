@@ -1,21 +1,14 @@
 ---
 layout: default
-title: Blog
+title: Blog Archive
 permalink: /archives/
 ---
-<header class="intro">
-  <h1>Blog</h1>
-  <p>Notes on engineering, programming, and everyday life.</p>
-  <a href="{{ '/' | relative_url }}">Back to home</a>
+<header class="archive-heading">
+  <a class="archive-home" href="{{ '/' | relative_url }}">Back to home</a>
+  <h1>Archive</h1>
 </header>
-{% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-{% for year in years %}
-<section class="home-section archive-year" aria-labelledby="year-{{ year.name }}">
-  <h2 id="year-{{ year.name }}">{{ year.name }}</h2>
-  <ul class="posts">
-    {% for post in year.items %}
-    {% include post-row.html post=post %}
-    {% endfor %}
-  </ul>
-</section>
-{% endfor %}
+<ul class="posts">
+  {% for post in site.posts %}
+  {% include post-row.html post=post %}
+  {% endfor %}
+</ul>

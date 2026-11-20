@@ -16,7 +16,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .shell { width: min(100% - 2.5rem, 44rem); margin-inline: auto; }
 .skip { position: absolute; inset-inline-start: 1rem; top: -6rem; }
 .skip:focus { top: .25rem; background: var(--bg); }
-.site-footer, .section-heading {
+.site-footer {
   display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
   flex-wrap: wrap;
 }
@@ -25,16 +25,14 @@ main { min-height: 65vh; }
 h1, h2, h3, p { margin-block-start: 0; }
 h1 { font-size: clamp(2rem, 6vw, 3.75rem); line-height: 1.12; overflow-wrap: anywhere; }
 h2 { font-size: 1.45rem; }
-.section-heading h2 { margin-bottom: .75rem; }
-.posts { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
-.post-row {
-  display: grid; grid-template-columns: 8rem minmax(0, 1fr);
-  gap: .5rem 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line);
-}
+.posts { padding: 0; margin: 0; list-style: none; display: grid; gap: 1.45rem; }
 time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
-.post-row time { padding-top: .25rem; }
-.post-title { display: inline-block; color: var(--text); font-weight: 700; font-size: 1.15rem; text-decoration: none; overflow-wrap: anywhere; }
-.post-title:hover { color: var(--accent); text-decoration: underline; }
+.post-row time, .archive-home { font-family: var(--mono); font-size: .875rem; padding-top: .2rem; }
+.post-title { color: var(--text); font-weight: 650; text-underline-offset: .2em; overflow-wrap: anywhere; }
+.post-title:hover { color: var(--accent); }
+.post-summary { margin: .25rem 0 0; color: var(--muted); }
+.archive-heading { padding-block: clamp(3rem, 8vw, 5rem) 2.25rem; }
+.archive-heading h1 { margin: 0; font-size: clamp(1.85rem, 5vw, 2.5rem); }
 .page-heading { padding-block: 3rem 2rem; }
 .page-heading h1 { margin: .3rem 0 .6rem; }
 .reading { max-width: 44rem; margin-inline: auto; }
@@ -54,24 +52,19 @@ time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tab
 .profile-links { font-family: var(--mono); font-size: .875rem; display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1.25rem; }
 .cv-links { color: var(--accent); white-space: nowrap; }
 .home-section { border-top: 1px solid var(--line); padding-top: 1.25rem; }
-.home-section + .home-section { margin-top: 2.5rem; }
-.home-section .posts { border-top: 0; }
-.archive-year h2 { color: var(--muted); font-size: 1rem; margin-bottom: .5rem; }
-.archive-year .post-row { border-bottom: 0; padding-block: .5rem; }
-.profile-intro, .projects li {
+.profile-intro, .projects li, .archive-heading, .post-row {
   display: grid;
   grid-template-columns: 8.75rem minmax(0, 1fr);
   gap: .5rem 1.5rem;
 }
 .profile-intro { max-width: none; padding-top: clamp(3rem, 8vw, 5rem); }
 .profile-intro h1 { font-size: clamp(1.85rem, 5vw, 2.5rem); line-height: 1.15; }
-.profile-copy { max-width: 34rem; }
-.profile-alias, .section-label, .project-period, .project-source {
+.profile-copy { grid-column: 2; max-width: 34rem; }
+.section-label, .project-period, .project-source {
   font-family: var(--mono);
   font-size: .875rem;
 }
-.profile-alias, .section-label, .project-period { color: var(--muted); }
-.profile-alias { padding-top: .4rem; }
+.section-label, .project-period { color: var(--muted); }
 .section-label { font-weight: 500; text-transform: uppercase; letter-spacing: .09em; margin-bottom: 1.5rem; }
 .projects { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.75rem; }
 .project-period { padding-top: .2rem; }
@@ -79,7 +72,7 @@ time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tab
 .projects p { margin-bottom: .4rem; }
 .projects .project-role { font-size: .875rem; color: var(--muted); }
 @media (max-width: 36rem) {
-  .profile-intro, .projects li { grid-template-columns: 1fr; gap: .25rem; }
-  .post-row { grid-template-columns: 1fr; gap: .2rem; }
+  .profile-intro, .projects li, .archive-heading, .post-row { grid-template-columns: 1fr; gap: .25rem; }
+  .profile-copy { grid-column: 1; }
   .post-row time { padding: 0; }
 }
