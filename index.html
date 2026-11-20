@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1>NoneOfEver<span>.</span></h1>
+  <p>{{ site.description }}</p>
+</section>
+<section aria-labelledby="recent">
+  <div class="section-heading"><h2 id="recent">最近文章</h2><a href="{{ '/archives/' | relative_url }}">全部文章</a></div>
+  <ul class="posts">
+    {% for post in site.posts limit: 5 %}
+    {% include post-row.html post=post %}
+    {% endfor %}
+  </ul>
+</section>

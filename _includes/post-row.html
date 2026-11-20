@@ -1,0 +1,7 @@
+<li class="post-row">
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y-%m-%d" }}</time>
+  <div>
+    <a class="post-title" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+    {% include tags.html tags=include.post.tags %}
+  </div>
+</li>

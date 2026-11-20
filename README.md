@@ -1,4 +1,11 @@
-# NoneOfEver.github.io
+# NoneOfEver
+
+个人博客的新版源码，使用 GitHub Pages 自带的 Jekyll 构建。文章放在 `_posts/`，文件名使用 `YYYY-MM-DD-slug.md`，并在 YAML front matter 中填写标题和标签。旧文章沿用原始永久链接。
+
+发布时，在仓库 **Settings → Pages** 中选择 **Deploy from a branch**，并指定发布分支的 **/(root)**。将 `noneofever.com` 添加为自定义域名，并按 [GitHub 的域名配置说明](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) 更新 DNS。证书就绪后启用 **Enforce HTTPS**。
+
+## 旧版项目说明
+
 <h2>关于我</h2>
 <p>你好，来自轻度折腾患者自己编写的静态博客，主题借鉴自GitHub社区。欢迎有相同爱好的朋友互相交流。</p>
 <h2>为什么要做这个blog？</h2>
