@@ -4,7 +4,7 @@
     <title>{{ site.title | xml_escape }}</title>
     <link>{{ '/' | absolute_url | xml_escape }}</link>
     <description>{{ site.description | xml_escape }}</description>
-    <language>zh-CN</language>
+    <language>{{ site.lang }}</language>
     {% for post in site.posts limit: 20 %}
     <item>
       <title>{{ post.title | xml_escape }}</title>

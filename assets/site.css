@@ -59,7 +59,6 @@ time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tab
 .intro h1 span { display: block; font-size: .38em; letter-spacing: 0; color: var(--muted); margin-top: .5rem; }
 .intro p { line-height: 1.75; margin-bottom: 1rem; }
 .profile-links { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1.25rem; }
-.cv-link span { color: var(--muted); font-size: .875rem; }
 .home-section { border-top: 1px solid var(--line); padding-top: 1.25rem; }
 .home-section + .home-section { margin-top: 2.5rem; }
 .home-section .posts { border-top: 0; }

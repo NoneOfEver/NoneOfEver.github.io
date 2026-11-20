@@ -2,16 +2,16 @@
 layout: default
 ---
 <section class="intro" aria-labelledby="name">
-  <h1 id="name">潘泊名 <span lang="en">NoneOfEver</span></h1>
-  <p>我关注机器人控制和嵌入式系统，做过轮腿机器人、机械臂和方程式赛车电控项目。这里整理我的作品、技术笔记和生活记录。</p>
+  <h1 id="name">Boming Pan <span>NoneOfEver</span></h1>
+  <p>I work on robot control and embedded systems. My projects include wheeled-legged robots, manipulators, and Formula Student race car electronics. I share my projects, engineering notes, and personal writing here.</p>
   <div class="profile-links">
     <a href="https://github.com/NoneOfEver">GitHub</a>
-    <a class="cv-link" href="{{ '/assets/cv.pdf' | relative_url }}" download="潘泊名简历.pdf">下载 CV <span>PDF</span></a>
+    <a href="{{ '/assets/cv.pdf' | relative_url }}">CV</a>
   </div>
 </section>
 
 <section id="projects" class="home-section" aria-labelledby="projects-title">
-  <div class="section-heading"><h2 id="projects-title">作品集</h2></div>
+  <div class="section-heading"><h2 id="projects-title">Projects</h2></div>
   <ul class="projects">
     {% for project in site.data.projects %}
     <li>
@@ -27,7 +27,7 @@ layout: default
 </section>
 
 <section id="blog" class="home-section" aria-labelledby="blog-title">
-  <div class="section-heading"><h2 id="blog-title">博客</h2><a href="{{ '/archives/' | relative_url }}">全部文章</a></div>
+  <div class="section-heading"><h2 id="blog-title">Blog</h2><a href="{{ '/archives/' | relative_url }}">All posts</a></div>
   <ul class="posts">
     {% for post in site.posts limit: 5 %}
     {% include post-row.html post=post %}

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 归档
+title: Blog Archive
 permalink: /archives/
 ---
-<header class="page-heading"><h1>归档</h1><p>共 {{ site.posts.size }} 篇文章</p></header>
+<header class="page-heading"><h1>Blog Archive</h1><p>{{ site.posts.size }} {% if site.posts.size == 1 %}post{% else %}posts{% endif %}</p></header>
 {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {% for year in years %}
 <section class="group" aria-labelledby="year-{{ year.name }}">

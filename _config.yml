@@ -1,7 +1,7 @@
 title: NoneOfEver
-description: 记录学习笔记、折腾经历，以及生活里的片段。
+description: Robotics projects, engineering notes, and reflections by Boming Pan.
 url: https://noneofever.com
-lang: zh-CN
+lang: en
 timezone: Asia/Shanghai
 markdown: kramdown
 exclude:
