@@ -6,7 +6,11 @@ layout: default
   <p>I work on robot control and embedded systems. My projects include wheeled-legged robots, manipulators, and Formula Student race car electronics. I share my projects, engineering notes, and personal writing here.</p>
   <nav class="profile-links" aria-label="Profile links">
     <a href="{{ '/archives/' | relative_url }}">Blog</a>
-    <a href="{{ '/assets/cv.pdf' | relative_url }}">CV</a>
+    <span>CV
+      <a href="{{ '/assets/cv.pdf' | relative_url }}" hreflang="zh-CN" aria-label="Chinese CV">zh</a>
+      <span aria-hidden="true">/</span>
+      <a href="{{ '/assets/cv-en.pdf' | relative_url }}" hreflang="en" aria-label="English CV">en</a>
+    </span>
     <a href="https://github.com/NoneOfEver">GitHub</a>
   </nav>
 </section>
