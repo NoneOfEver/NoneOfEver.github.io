@@ -1,20 +1,24 @@
 - title: Wheeled-Legged Robot
+  period: Mar 2026–Present
   role: Control Algorithms Lead
   description: Developed an LQR controller with virtual model control for chassis balance and leg length adjustment. I validated the controller in MuJoCo and deployed it on the robot for obstacle traversal and jumping tests.
   url: https://github.com/NoneOfEver/wbr_control
   link_label: Source on GitHub
 
 - title: Gantry and Robotic Arm
+  period: Sep 2025–Mar 2026
   role: Control Algorithms Lead
   description: Built the arm kinematics, depth-vision pipeline, and grasp trajectory planner. I also implemented remote teleoperation using a controller arm with matching joints.
   url: https://github.com/HNUST-Dust/Dust_EngineerRobot
   link_label: Source on GitHub
 
 - title: Formula Student Race Car Electronics
+  period: Nov 2024–Oct 2025
   role: Hardware and Software Lead
   description: Developed CAN data acquisition, the in-car display, and LoRa telemetry. I also implemented electronic shifting, clutch actuation, and log playback for post-race analysis.
 
 - title: Low-Power Controller for Periodic Bone Transport
+  period: Nov 2025–Feb 2026
   role: Embedded Software Lead
   description: Developed precision motor control, low-power task scheduling, and Bluetooth Low Energy monitoring on the ESP32-S3.
   url: https://github.com/NoneOfEver/rabbit
