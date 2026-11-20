@@ -4,9 +4,6 @@ url: https://noneofever.com
 lang: en
 timezone: Asia/Shanghai
 markdown: kramdown
-exclude:
-  - README.md
-  - blog_file
 defaults:
   - scope:
       path: ""
