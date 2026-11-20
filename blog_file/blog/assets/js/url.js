@@ -1,1 +1,0 @@
-var suiyan = { url : 'https://noneofever.github.io/blog_file/blog/'}

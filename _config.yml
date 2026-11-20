@@ -1,0 +1,13 @@
+title: NoneOfEver
+description: Robotics projects, engineering notes, and reflections by Boming Pan.
+url: https://noneofever.com
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: noe

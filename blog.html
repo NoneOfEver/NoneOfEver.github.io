@@ -1,0 +1,17 @@
+---
+layout: listing
+title: Blog
+permalink: /blog/
+---
+<div class="row">
+  <div class="label"><a class="back" href="{{ '/' | relative_url }}" aria-label="Back to home">← home</a></div>
+  <div><h1>Blog</h1></div>
+</div>
+
+<section class="section blog-entries" aria-label="Posts">
+  <div class="entries">
+    {% for post in site.posts %}
+    {% include post-row.html post=post %}
+    {% endfor %}
+  </div>
+</section>

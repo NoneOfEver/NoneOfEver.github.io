@@ -1,0 +1,4 @@
+---
+permalink: /rss.xml
+---
+{% include rss.xml %}
