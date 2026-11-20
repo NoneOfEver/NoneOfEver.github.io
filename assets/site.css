@@ -25,14 +25,27 @@ main { min-height: 65vh; }
 h1, h2, h3, p { margin-block-start: 0; }
 h1 { font-size: clamp(2rem, 6vw, 3.75rem); line-height: 1.12; overflow-wrap: anywhere; }
 h2 { font-size: 1.45rem; }
-.archive { width: min(100% - 2.5rem, 52rem); }
-.posts { padding: 0; margin: 0; list-style: none; display: grid; gap: 1.85rem; }
+.blog-index > .shell { width: min(100% - 2.5rem, 52rem); }
+@media (prefers-color-scheme: dark) {
+  .blog-index {
+    color-scheme: dark;
+    --bg: #13191c;
+    --text: #e8edf0;
+    --muted: #a4b1b9;
+    --line: #303b42;
+    --accent: #79cfe2;
+    --surface: #1c272d;
+  }
+}
+.posts { padding: 0; margin: 0; list-style: none; display: grid; gap: 2.25rem; }
 time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
 .post-row time, .archive-home, .post-read { font-family: var(--mono); font-size: .875rem; padding-top: .2rem; }
-.post-title { color: var(--text); font-weight: 650; text-underline-offset: .2em; overflow-wrap: anywhere; }
+.archive-home, .post-title, .post-read { text-decoration: none; }
+.archive-home:hover, .post-title:hover, .post-read:hover { text-decoration: underline; }
+.post-title { color: var(--text); font-weight: 600; overflow-wrap: anywhere; }
 .post-title:hover { color: var(--accent); }
 .post-summary { margin: .25rem 0 .5rem; color: var(--muted); }
-.post-details h2 { font-size: 1.05rem; line-height: 1.4; margin: 0; }
+.post-details h2 { font-size: 1.125rem; line-height: 1.4; margin: 0; }
 .post-preview {
   display: block;
   width: 100%;
@@ -50,8 +63,13 @@ time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tab
   overflow-wrap: anywhere;
 }
 .post-preview-text strong { color: var(--text); display: block; margin-bottom: .35rem; }
-.post-preview-text span { display: block; }
-.archive-heading { padding-block: clamp(3rem, 8vw, 5rem) 2.25rem; }
+.post-preview-text span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.archive-heading { padding-block: clamp(3rem, 8vw, 5rem) 2.75rem; }
 .archive-heading h1 { margin: 0; font-size: clamp(1.85rem, 5vw, 2.5rem); }
 .page-heading { padding-block: 3rem 2rem; }
 .page-heading h1 { margin: .3rem 0 .6rem; }
@@ -77,7 +95,7 @@ time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tab
   grid-template-columns: 8.75rem minmax(0, 1fr);
   gap: .5rem 1.5rem;
 }
-.post-row { grid-template-columns: 8.75rem minmax(7rem, 11rem) minmax(0, 1fr); }
+.post-row { grid-template-columns: 8.75rem minmax(7rem, 11rem) minmax(0, 1fr); align-items: start; }
 .profile-intro { max-width: none; padding-top: clamp(3rem, 8vw, 5rem); }
 .profile-intro h1 { font-size: clamp(1.85rem, 5vw, 2.5rem); line-height: 1.15; }
 .profile-copy { grid-column: 2; max-width: 34rem; }

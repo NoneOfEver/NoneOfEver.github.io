@@ -9,9 +9,9 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/rss.xml' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
 </head>
-<body>
+<body{% if page.blog_index %} class="blog-index"{% endif %}>
   <a class="skip" href="#main">Skip to content</a>
-  <main id="main" class="shell{% if page.archive %} archive{% endif %}">{{ content }}</main>
+  <main id="main" class="shell">{{ content }}</main>
   <footer class="shell site-footer">
     <span>NoneOfEver</span>
     <div><a href="https://github.com/NoneOfEver">GitHub</a><a href="{{ '/rss.xml' | relative_url }}">RSS</a></div>
