@@ -1,15 +1,17 @@
 ---
-layout: default
+layout: blog
 title: Blog
-blog_index: true
 permalink: /blog/
 ---
-<header class="archive-heading">
-  <a class="archive-home" href="{{ '/' | relative_url }}" aria-label="Back to home">← home</a>
-  <h1>Blog</h1>
-</header>
-<ul class="posts">
-  {% for post in site.posts %}
-  {% include post-row.html post=post %}
-  {% endfor %}
-</ul>
+<div class="row">
+  <div class="label"><a class="back" href="{{ '/' | relative_url }}" aria-label="Back to home">← home</a></div>
+  <div><h1>Blog</h1></div>
+</div>
+
+<section class="section blog-entries" aria-label="Posts">
+  <div class="entries">
+    {% for post in site.posts %}
+    {% include post-row.html post=post %}
+    {% endfor %}
+  </div>
+</section>
