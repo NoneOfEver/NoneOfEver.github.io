@@ -1,7 +1,0 @@
-{% if include.tags.size > 0 %}
-<ul class="pills" aria-label="标签">
-  {% for tag in include.tags %}
-  <li><a href="{{ '/tags/' | relative_url }}#{{ tag | slugify: 'raw' | uri_escape }}">{{ tag | escape }}</a></li>
-  {% endfor %}
-</ul>
-{% endif %}

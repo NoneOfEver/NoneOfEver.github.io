@@ -1,22 +1,12 @@
 :root {
-  color-scheme: light dark;
-  --bg: #fbfbfa;
+  color-scheme: light;
+  --bg: #fff;
   --text: #1d2531;
   --muted: #4d5d74;
   --line: #d8dde2;
   --accent: #1349aa;
   --surface: #eef1f4;
   font: 100%/1.6 "Inter", system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #131b2b;
-    --text: #ecf2ff;
-    --muted: #b3c2da;
-    --line: #40506c;
-    --accent: #9cbcff;
-    --surface: #222f47;
-  }
 }
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; color: var(--text); background: var(--bg); }
@@ -50,9 +40,6 @@ time, .meta { color: var(--muted); font-size: .875rem; font-variant-numeric: tab
 .post-row time { padding-top: .25rem; }
 .post-title { display: inline-block; color: var(--text); font-weight: 700; font-size: 1.15rem; text-decoration: none; overflow-wrap: anywhere; }
 .post-title:hover { color: var(--accent); text-decoration: underline; }
-.pills { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; margin: .5rem 0 0; padding: 0; }
-.pills a { display: inline-block; padding: .15rem .6rem; border-radius: .4rem; background: var(--surface); font-size: .875rem; text-decoration: none; }
-.pills a:hover { text-decoration: underline; }
 .page-heading { padding-block: 3rem 2rem; }
 .page-heading h1 { margin: .3rem 0 .6rem; }
 .group { margin-block: 2rem; scroll-margin-top: 1rem; }

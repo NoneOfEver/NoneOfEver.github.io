@@ -5,7 +5,6 @@ layout: default
   <header class="page-heading">
     <div class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time> · {{ page.author | escape }}</div>
     <h1>{{ page.title | escape }}</h1>
-    {% include tags.html tags=page.tags %}
   </header>
   <div class="prose">{{ content }}</div>
   <p class="back"><a href="{{ '/archives/' | relative_url }}">返回文章归档</a></p>
