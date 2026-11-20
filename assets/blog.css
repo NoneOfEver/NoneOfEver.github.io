@@ -14,7 +14,7 @@
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not(.home-page) {
+  :root {
     --bg: #0f1416;
     --fg: #e2e8eb;
     --muted: #8e9ba2;
@@ -153,7 +153,6 @@ a.title:hover { color: var(--accent); }
 }
 
 /* Homepage adaptations for a text-only profile and portfolio. */
-.home-page { --bg: #fff; }
 .home-page .intro > div { grid-column: 2; }
 .cv-links { color: var(--accent); white-space: nowrap; }
 .project-role { margin: 4px 0 0; }
