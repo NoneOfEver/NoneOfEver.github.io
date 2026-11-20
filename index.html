@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: listing
+title: Boming Pan
 ---
-<section class="intro profile-intro" aria-labelledby="name">
-  <div class="profile-copy">
+<section class="row intro" aria-labelledby="name">
+  <div>
     <h1 id="name">Boming Pan</h1>
     <p>I work on robot control and embedded systems. My projects include wheeled-legged robots, manipulators, and Formula Student race car electronics. I share my projects, engineering notes, and personal writing here.</p>
-    <nav class="profile-links" aria-label="Profile links">
+    <nav class="links" aria-label="Profile links">
       <span class="cv-links">CV(<a href="{{ '/assets/cv.pdf' | relative_url }}" hreflang="zh-CN" aria-label="Chinese CV">zh</a>|<a href="{{ '/assets/cv-en.pdf' | relative_url }}" hreflang="en" aria-label="English CV">en</a>)</span>
       <a href="https://github.com/NoneOfEver">GitHub</a>
       <a href="{{ '/blog/' | relative_url }}">Blog</a>
@@ -13,21 +14,30 @@ layout: default
   </div>
 </section>
 
-<section id="projects" class="home-section" aria-labelledby="projects-title">
-  <h2 id="projects-title" class="section-label">Projects</h2>
-  <ul class="projects">
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <div class="row section-head">
+    <h2 id="projects-title" class="label caps">Projects</h2>
+  </div>
+  <div class="entries">
     {% for project in site.data.projects %}
-    <li>
-      <span class="project-period">{{ project.period | escape }}</span>
+    <article class="row">
+      <div class="label project-period">{{ project.period | escape }}</div>
       <div>
-        <h3>{{ project.title | escape }}</h3>
-        <p class="project-role">{{ project.role | escape }}</p>
-        <p>{{ project.description | escape }}</p>
+        <h3 class="title">{{ project.title | escape }}</h3>
+        <p class="authors project-role">{{ project.role | escape }}</p>
+        <p class="desc project-summary">{{ project.description | escape }}</p>
         {% if project.url %}
-        <a class="project-source" href="{{ project.url | escape }}">{{ project.link_label | escape }}</a>
+        <div class="venue-line"><a href="{{ project.url | escape }}">{{ project.link_label | escape }}</a></div>
         {% endif %}
       </div>
-    </li>
+    </article>
     {% endfor %}
-  </ul>
+  </div>
 </section>
+
+<footer class="foot">
+  <div class="content">
+    <span>NoneOfEver</span>
+    <a href="{{ '/rss.xml' | relative_url }}">RSS</a>
+  </div>
+</footer>
