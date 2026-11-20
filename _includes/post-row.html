@@ -1,9 +1,21 @@
 <li class="post-row">
-  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%b %d, %Y" }}</time>
-  <div>
-    <a class="post-title" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+  <time datetime="{{ include.post.date | date_to_xmlschema }}">
+    {{ include.post.date | date: "%b %d" }}<br>
+    {{ include.post.date | date: "%Y" }}
+  </time>
+  {% if include.post.thumbnail %}
+  <img class="post-preview" src="{{ include.post.thumbnail | relative_url }}" alt="" loading="lazy">
+  {% else %}
+  <div class="post-preview post-preview-text" aria-hidden="true">
+    <strong>{{ include.post.title | escape }}</strong>
+    <span>{{ include.post.excerpt | strip_html | normalize_whitespace | truncate: 100 | escape_once }}</span>
+  </div>
+  {% endif %}
+  <article class="post-details">
+    <h2><a class="post-title" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h2>
     {% if include.post.description %}
     <p class="post-summary">{{ include.post.description | escape }}</p>
     {% endif %}
-  </div>
+    <a class="post-read" href="{{ include.post.url | relative_url }}" aria-label="Read {{ include.post.title | escape }}">read post</a>
+  </article>
 </li>
