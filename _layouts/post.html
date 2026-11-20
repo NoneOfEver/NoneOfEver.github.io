@@ -6,6 +6,13 @@ layout: default
     <div class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time> · {{ page.author | escape }}</div>
     <h1>{{ page.title | escape }}</h1>
   </header>
-  <div class="prose">{{ content }}</div>
+  {% if page.empty_note %}
+  <p lang="en">No content yet.</p>
+  {% else %}
+  <div class="prose" lang="{{ page.lang | default: site.lang }}">{{ content }}</div>
+  {% endif %}
+  {% if page.math %}
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+  {% endif %}
   <p class="back"><a href="{{ '/blog/' | relative_url }}">Back to Blog</a></p>
 </article>
