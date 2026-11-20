@@ -1,22 +1,9 @@
 <article class="row">
-  <time class="label" datetime="{{ include.post.date | date_to_xmlschema }}">
-    {{ include.post.date | date: "%b %d" }}<br>
-    {{ include.post.date | date: "%Y" }}
-  </time>
-  <div class="entry-body">
-    <a class="thumb{% unless include.post.thumbnail %} text-thumb{% endunless %}" href="{{ include.post.url | relative_url }}" aria-label="Preview of {{ include.post.title | escape }}">
-      {% if include.post.thumbnail %}
-      <img src="{{ include.post.thumbnail | relative_url }}" alt="" loading="lazy">
-      {% else %}
-      <span aria-hidden="true">{{ include.post.excerpt | strip_html | normalize_whitespace | truncate: 105 | escape_once }}</span>
-      {% endif %}
-    </a>
-    <div>
-      <a class="title" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
-      {% if include.post.description %}
-      <div class="desc">{{ include.post.description | escape }}</div>
-      {% endif %}
-      <div class="venue-line"><a href="{{ include.post.url | relative_url }}">read post</a></div>
-    </div>
+  <time class="label" datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%b %d, %Y" }}</time>
+  <div>
+    <a class="title" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+    {% if include.post.description %}
+    <p class="desc">{{ include.post.description | escape }}</p>
+    {% endif %}
   </div>
 </article>
