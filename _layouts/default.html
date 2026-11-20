@@ -14,10 +14,12 @@
   <header class="shell site-header">
     <a class="wordmark" href="{{ '/' | relative_url }}">NoneOfEver<span>.</span></a>
     <nav aria-label="主导航">
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首页</a>
-      <a href="{{ '/archives/' | relative_url }}"{% if page.url == '/archives/' %} aria-current="page"{% endif %}>归档</a>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>主页</a>
+      <a href="{{ '/' | relative_url }}#projects">作品集</a>
+      <a href="{{ '/archives/' | relative_url }}"{% if page.url == '/archives/' %} aria-current="page"{% endif %}>博客</a>
       <a href="{{ '/tags/' | relative_url }}"{% if page.url == '/tags/' %} aria-current="page"{% endif %}>标签</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>关于</a>
+      <a href="{{ '/assets/cv.pdf' | relative_url }}" download="潘泊名简历.pdf">CV</a>
     </nav>
   </header>
   <main id="main" class="shell">{{ content }}</main>

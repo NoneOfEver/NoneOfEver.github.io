@@ -1,0 +1,21 @@
+- title: 串联型轮腿机器人
+  role: 控制算法负责人
+  description: 用 LQR 和虚拟模型控制实现底盘平衡与腿长调节，在 MuJoCo 中验证控制器后，将算法部署到实机进行越障与跳跃测试。
+  url: https://github.com/NoneOfEver/wbr_control
+  link_label: GitHub 源码
+
+- title: 龙门架与机械臂系统
+  role: 控制算法负责人
+  description: 搭建机械臂运动学、深度视觉与抓取轨迹规划流程，实现远程同构遥操作。
+  url: https://github.com/HNUST-Dust/Dust_EngineerRobot
+  link_label: GitHub 源码
+
+- title: 方程式赛车电子控制系统
+  role: 硬件与软件负责人
+  description: 开发 CAN 数据采集、车载显示与 LoRa 遥测，并实现电控换挡、离合执行和赛后日志回放。
+
+- title: 周期性骨搬移低功耗控制系统
+  role: 嵌入式软件负责人
+  description: 基于 ESP32-S3 开发精密驱动、低功耗任务调度和 BLE 状态监测。
+  url: https://github.com/NoneOfEver/rabbit
+  link_label: GitHub 源码

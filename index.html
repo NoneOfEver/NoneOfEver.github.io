@@ -1,12 +1,33 @@
 ---
 layout: default
 ---
-<section class="hero">
-  <h1>NoneOfEver<span>.</span></h1>
-  <p>{{ site.description }}</p>
+<section class="intro" aria-labelledby="name">
+  <h1 id="name">潘泊名 <span lang="en">NoneOfEver</span></h1>
+  <p>我关注机器人控制和嵌入式系统，做过轮腿机器人、机械臂和方程式赛车电控项目。这里整理我的作品、技术笔记和生活记录。</p>
+  <div class="profile-links">
+    <a href="https://github.com/NoneOfEver">GitHub</a>
+    <a class="cv-link" href="{{ '/assets/cv.pdf' | relative_url }}" download="潘泊名简历.pdf">下载 CV <span>PDF</span></a>
+  </div>
 </section>
-<section aria-labelledby="recent">
-  <div class="section-heading"><h2 id="recent">最近文章</h2><a href="{{ '/archives/' | relative_url }}">全部文章</a></div>
+
+<section id="projects" class="home-section" aria-labelledby="projects-title">
+  <div class="section-heading"><h2 id="projects-title">作品集</h2></div>
+  <ul class="projects">
+    {% for project in site.data.projects %}
+    <li>
+      <h3>{{ project.title | escape }}</h3>
+      <p class="project-role">{{ project.role | escape }}</p>
+      <p>{{ project.description | escape }}</p>
+      {% if project.url %}
+      <a href="{{ project.url | escape }}">{{ project.link_label | escape }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="blog" class="home-section" aria-labelledby="blog-title">
+  <div class="section-heading"><h2 id="blog-title">博客</h2><a href="{{ '/archives/' | relative_url }}">全部文章</a></div>
   <ul class="posts">
     {% for post in site.posts limit: 5 %}
     {% include post-row.html post=post %}
